@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Tactical Jacket",
+    "description": "Waterproof, windproof and ultra durable.",
+    "image": "images/jacket.jpg",
+    "category": "Apparel",
+    "price": 4999
+  },
+  {
+    "id": "2",
+    "name": "Combat Boots",
+    "description": "All-terrain boots with reinforced soles.",
+    "image": "images/boots.jpg",
+    "category": "Footwear",
+    "price": 6999
+  },
+  {
+    "id": "3",
+    "name": "Multi-Tool Knife",
+    "description": "18-in-1 tool for survival and emergencies.",
+    "image": "images/knife.jpg",
+    "category": "Tools",
+    "price": 2499
+  },
+  {
+    "id": "4",
+    "name": "Night Vision Goggles",
+    "description": "Infrared and night enhancement system.",
+    "image": "images/nightvision.jpg",
+    "category": "Gear",
+    "price": 14999
+  },
+  {
+    "id": "5",
+    "name": "Tactical Gloves",
+    "description": "Anti-slip, cut-resistant and breathable.",
+    "image": "images/gloves.jpg",
+    "category": "Accessories",
+    "price": 1999
+  }
+]

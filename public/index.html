@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CAL.TURE TACTICAL</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <meta name="theme-color" content="#1a1a1a">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(reg => console.log("✅ Service Worker registered", reg))
+          .catch(err => console.error("❌ Service Worker failed", err));
+      });
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">CAL.TURE <span>TACTICAL</span></div>
+    <input type="text" class="search-bar" id="searchInput" placeholder="Search tactical gear..." />
+    <ul class="nav-links">
+      <li><button class="filter-btn active" data-category="All">All</button></li>
+      <li><button class="filter-btn" data-category="Apparel">Apparel</button></li>
+      <li><button class="filter-btn" data-category="Footwear">Footwear</button></li>
+      <li><button class="filter-btn" data-category="Gear">Gear</button></li>
+      <li><button class="filter-btn" data-category="Accessories">Accessories</button></li>
+      <li><button class="filter-btn" data-category="Tools">Tools</button></li>
+    </ul>
+    <select id="sortSelect">
+      <option value="default">Sort by Price</option>
+      <option value="asc">Price: Low to High</option>
+      <option value="desc">Price: High to Low</option>
+    </select>
+    <div id="cart-icon">🛒<span id="cart-count">0</span></div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Gear Up Like a Pro</h2>
+      <p>Top-tier tactical gear, apparel, and survival tools for every mission.</p>
+      <button class="btn">Explore Now</button>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <h2>Our Products</h2>
+    <div id="product-grid" class="product-grid"></div>
+  </section>
+
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modal-img" src="" alt="Product Image" />
+      <h3 id="modal-title">Product Title</h3>
+      <p id="modal-desc">Product Description</p>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <span id="close-cart">&times;</span>
+    </div>
+    <ul id="cart-items"></ul>
+    <button class="btn" id="checkout-btn">Checkout</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CAL.TURE TACTICAL. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
